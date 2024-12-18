@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use CodeIgniter\Model;
@@ -11,4 +12,34 @@ class TarefaModel extends Model
     protected $useTimestamps = true;
     protected $createdField = 'data_criacao';
     protected $updatedField = 'data_atualizacao';
+
+    public function getTarefas()
+    {
+        return $this->findAll();
+    }
+
+    public function getTarefa($id)
+    {
+        return $this->find($id);
+    }
+
+    public function createTarefa($data)
+    {
+        return $this->insert($data);
+    }
+
+    public function updateTarefa($id, $data)
+    {
+        return $this->update($id, $data);
+    }
+
+    public function deleteTarefa($id)
+    {
+        return $this->delete($id);
+    }
+
+    public function validateData($data)
+    {
+        return !empty($data['titulo']) && !empty($data['descricao']) && in_array($data['status'], ['pendente', 'em progresso', 'concluída']);
+    }
 }

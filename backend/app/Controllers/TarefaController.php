@@ -6,12 +6,20 @@ use CodeIgniter\RESTful\ResourceController;
 
 class TarefaController extends ResourceController
 {
+    public function __construct()
+    {
+        header("Access-Control-Allow-Origin: *");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        header("Access-Control-Allow-Headers: Content-Type, Authorization");
+    }
+
     protected $modelName = 'App\Models\TarefaModel';
     protected $format = 'json';
 
     public function index()
     {
-        return $this->respond($this->model->findAll());
+        $tarefas = $this->model->findAll();
+        return $this->respond($tarefas);
     }
 
     public function create()
