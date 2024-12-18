@@ -29,37 +29,50 @@ cd testVuePHP
 ```
 
 ### Passo 2: Navegar para o diretório `backend`
+
 ```sh
 cd backend
 ```
+
 ### Passo 3: Instalar dependências
+
 ```
 composer install
 ```
+
 ### Passo 4: Popular banco de dados com tabelas
- ```
+
+```
 php spark migrate
 ```
+
 ### Passo 5: Iniciar servidor PHP
- ```
+
+```
 php spark serve
 ```
+
 ### Passo 6: Navegar para o diretório `frontend`
+
 ```sh
 cd..
 cd frontend
 ```
+
 ### Passo 7: Instalar dependências com npm
-  ```
+
+```
 npm install
 ```
+
 ### Passo 7: Iniciar servidor Vue
+
 ```
-npm run serve
+npm run dev
 ```
 
 > Abra o navegador e vá para http://localhost:8000.
-> 
+>
 > Para ter acesso ao Banco de Dados vá para http://localhost/phpmyadmin
 
 ## Autor
