@@ -6,14 +6,13 @@
      <p>Criado em: {{ tarefa.data_criacao }}</p>
      <p>Atualizado em: {{ tarefa.data_atualizacao }}</p>
      <button @click="editTask">Editar</button>
-     {{ chavePrimaria }}
      <button @click="deleteTask">Excluir</button>
    </div>
  </template>
 
 <script lang="ts">
 
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'TarefasItem',
@@ -27,12 +26,6 @@ export default defineComponent({
     deleteTask() {
       this.$emit('delete', this.tarefa.id);
     }
-  },
-  setup(props, {emit} ){
-   const chavePrimaria =ref(1);
-   return{
-      chavePrimaria
-   }
   }
 });
 </script>
