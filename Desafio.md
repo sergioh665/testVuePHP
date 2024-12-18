@@ -1,14 +1,14 @@
 # Teste Técnico para Estágio - Desenvolvimento Web
 
-Objetivo: Avaliar conhecimentos básicos em PHP (backend) e Vue.js (frontend).  
+### Objetivo: Avaliar conhecimentos básicos em PHP (backend) e Vue.js (frontend).  
 
-Tempo de Realização:  
+## Tempo de Realização:
 - Tempo total: 4 horas  
 - Recomenda-se o uso de frameworks como Codeigniter 4 (PHP) e Vue.js  
 
-Descrição do Projeto: Sistema de Gerenciamento de Tarefas  
+## Descrição do Projeto: Sistema de Gerenciamento de Tarefas  
 
-Requisitos Técnicos:  
+**Requisitos Técnicos:**  
 1. Backend (PHP)  
 2. Frontend (Vue.js)  
 3. Banco de Dados MySQL  
@@ -29,7 +29,7 @@ Funcionalidades Requeridas:
   - Formulário de criação de tarefa  
   - Botões de edição e exclusão  
 
-Modelo de Dados (Tarefa):  
+**Modelo de Dados (Tarefa):**
 ```json
 {
   "id": "inteiro",
