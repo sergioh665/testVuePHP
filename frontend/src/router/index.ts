@@ -1,19 +1,22 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
-
 // Definição de rotas
 const routes: Array<RouteRecordRaw> = [
   { 
-    path: '/',
-    name: 'TarefasList',
-    component: () => import("@/views/Tarefas.vue"),
-     // Componente para a página inicial
+    path: '/', //vai listar as tarefas
+    name: 'TarefasLista',
+    component: () => import("../views/Tarefas.vue"),
   },
   { 
-    path: '/tarefas',
-    name: 'Tarefas',
-    component: () => import("@/views/Tarefas.vue"),
-     // Componente para a página inicial
+    path: '/tarefas/nova', //criar/editar nova tarefa
+    name: 'TarefasForm',
+    component: () => import("../views/TarefasForm.vue"),
+  },
+  { 
+    path: '/tarefas/:id/editar', //criar/editar nova tarefa
+    name: 'TarefasEdit',
+    component: () => import("../views/TarefasForm.vue"),
+    props: true
   }
 ];
 

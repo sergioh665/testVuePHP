@@ -5,8 +5,8 @@
      <p>Status: {{ tarefa.status }}</p>
      <p>Criado em: {{ tarefa.data_criacao }}</p>
      <p>Atualizado em: {{ tarefa.data_atualizacao }}</p>
-     <button @click="editTask">Editar</button>
-     <button @click="deleteTask">Excluir</button>
+     <button @click="editarTarefa">Editar</button>
+     <button @click="apagarTarefa">Excluir</button>
    </div>
  </template>
 
@@ -20,11 +20,11 @@ export default defineComponent({
    "tarefa",
   ],
   methods: {
-    editTask() {
-      this.$emit('edit', this.tarefa.id);
+    editarTarefa() {
+      this.$emit('editar', this.tarefa.id);
     },
-    deleteTask() {
-      this.$emit('delete', this.tarefa.id);
+    apagarTarefa() {
+      this.$emit('apagar', this.tarefa.id);
     }
   }
 });
