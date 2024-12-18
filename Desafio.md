@@ -13,7 +13,7 @@
 2. Frontend (Vue.js)  
 3. Banco de Dados MySQL  
 
-Funcionalidades Requeridas:  
+## Funcionalidades Requeridas:  
 **Backend (PHP)**  
 - Criar uma API RESTful para gerenciamento de tarefas  
 - Endpoints necessários:  
@@ -41,7 +41,7 @@ Funcionalidades Requeridas:
 }
 ```
 
-### Critérios de Avaliação
+## Critérios de Avaliação
 
 ## PHP (Backend)
 - Estruturação correta do código
