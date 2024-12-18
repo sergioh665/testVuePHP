@@ -21,6 +21,8 @@ export default {
     fetchTarefas() {
       axios.get('http://localhost:8080/tarefas').then(response => {
         this.tarefas = response.data;
+      }).catch(error => {
+        console.error("Houve um erro ao buscar as tarefas:", error);
       });
     },
   },

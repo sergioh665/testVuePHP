@@ -26,6 +26,8 @@ export default {
         this.$emit('tarefaCriada');
         this.titulo = '';
         this.descricao = '';
+      }).catch(error => {
+        console.error("Houve um erro ao criar a tarefa:", error);
       });
     },
   },
