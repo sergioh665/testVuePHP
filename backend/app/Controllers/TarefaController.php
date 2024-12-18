@@ -26,11 +26,12 @@ class TarefaController extends ResourceController
 
     public function create()
     {
-        $data = $this->request->getPost();
+        $data = $this->request->getJSON(true); // Obter dados JSON da requisição
         if ($this->model->insert($data)) {
             return $this->respondCreated($data);
+        } else {
+            return $this->failValidationErrors($this->model->errors());
         }
-        return $this->failValidationErrors($this->model->errors());
     }
 
     public function update($id = null)

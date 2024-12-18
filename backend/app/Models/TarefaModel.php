@@ -13,6 +13,14 @@ class TarefaModel extends Model
     protected $createdField = 'data_criacao';
     protected $updatedField = 'data_atualizacao';
 
+    protected $validationRules = [
+        'titulo'        => 'required|min_length[3]',
+        'descricao'     => 'required',
+        'status'        => 'required',
+        'data_criacao'  => 'required|valid_date',
+        'data_atualizacao' => 'required|valid_date'
+    ];
+
     public function getTarefas()
     {
         return $this->findAll();
